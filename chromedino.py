@@ -9,13 +9,11 @@ import pygame
 
 pygame.init()
 
-# Global Constants
-
 SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 1100
 SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-pygame.display.set_caption("Chrome Dino Runner")
+pygame.display.set_caption("Chrome Dino")
 
 Ico = pygame.image.load("DinoWallpaper.png")
 pygame.display.set_icon(Ico)
@@ -327,9 +325,9 @@ def menu(death_count):
             with open("score.txt", "r") as f:
                 score = (
                     f.read()
-                )  # Read all file in case values are not on a single line
-                score_ints = [int(x) for x in score.split()]  # Convert strings to ints
-            highscore = max(score_ints)  # sum all elements of the list
+                )  
+                score_ints = [int(x) for x in score.split()]  
+            highscore = max(score_ints) 
             hs_score_text = font.render(
                 "High Score : " + str(highscore), True, FONT_COLOR
             )
